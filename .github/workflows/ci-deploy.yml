@@ -1,0 +1,59 @@
+name: CI Build & Deploy
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up QEMU (for multi-platform, optional)
+        uses: docker/setup-qemu-action@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: Dockerfile
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/flask-demo:latest
+
+  deploy:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (for repo content if you want)
+        uses: actions/checkout@v4
+
+      - name: Copy manifests and trigger deploy on server via SSH
+        uses: appleboy/ssh-action@v0.1.9
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            set -e
+            # Option: cd to repo and pull or copy manifests
+            if [ -d "$HOME/app-deploy-repo" ]; then
+              cd $HOME/app-deploy-repo
+              git pull origin main
+            else
+              git clone https://github.com/${{ github.repository }} $HOME/app-deploy-repo
+              cd $HOME/app-deploy-repo
+            fi
+            # run server-side script to apply manifests and set image
+            bash deploy-server-scripts/apply-manifests.sh
