@@ -2,7 +2,7 @@
 set -e
 
 # Path to repo on server where manifests are placed or use kubectl apply with inline replace
-REPO_DIR="$HOME/app-deploy-repo"
+REPO_DIR="$HOME/Better_Assessment$"
 
 # Option A: if you clone repo on server, update and apply:
 if [ -d "$REPO_DIR" ]; then
@@ -10,10 +10,10 @@ if [ -d "$REPO_DIR" ]; then
   git pull origin main || true
   kubectl apply -f k8s/
   # Force image update to latest tag
-  kubectl -n default set image deployment/flask-deploy flask=<DOCKERHUB_USERNAME>/flask-demo:latest --record || true
+  kubectl -n default set image deployment/flask-deploy flask=tayyababagwan/flask-demo:latest --record || true
 else
   echo "Repo not found at $REPO_DIR; cloning..."
-  git clone https://github.com/<YOUR_GITHUB>/<REPO>.git "$REPO_DIR"
+  git clone https://github.com/tayyaba-keystone/Better_Assessment.git "$REPO_DIR"
   cd "$REPO_DIR"
   kubectl apply -f k8s/
 fi
