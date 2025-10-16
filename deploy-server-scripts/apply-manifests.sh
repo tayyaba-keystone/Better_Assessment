@@ -2,7 +2,7 @@
 set -e
 
 # Path to repo on server where manifests are placed or use kubectl apply with inline replace
-REPO_DIR="$HOME/Better_Assessment$"
+REPO_DIR="$HOME/Better_Assessment"
 
 # Option A: if you clone repo on server, update and apply:
 if [ -d "$REPO_DIR" ]; then
