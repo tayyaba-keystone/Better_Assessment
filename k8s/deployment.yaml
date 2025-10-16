@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flask
-        image: <DOCKERHUB_USERNAME>/flask-demo:latest
+        image: tayyababagwan/flask-demo:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
