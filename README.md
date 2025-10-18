@@ -44,39 +44,41 @@ The project is optimized to run smoothly on a **t2.micro** instance.
 
 ### 3️⃣ Docker Installed & Running
 📸 *Screenshot – Docker Installed*  
- 
-📸 *Screenshot – Docker Image on Docker Hub*  
- 
+<img width="975" height="99" alt="Image" src="https://github.com/user-attachments/assets/4e079aeb-a451-4b52-95c1-e63e127e6bd9" />
+
+ 📸 *Screenshot – Docker Image on Docker Hub*  
+ <img width="975" height="325" alt="Image" src="https://github.com/user-attachments/assets/fa53c700-2c35-4498-bab8-923b3aeacf5e" />
 
 ---
 
 ### 4️⃣ Flask App Running in Browser
 📸 *Screenshot – Flask App*  
+<img width="975" height="501" alt="Image" src="https://github.com/user-attachments/assets/30a698cd-2ff4-4892-b26c-3c052e3d727f" />
  
 ---
 
 ### 5️⃣ GitHub Actions Pipeline Success
 📸 *Screenshot – CI/CD GitHub Actions Success*  
- 
+<img width="975" height="417" alt="Image" src="https://github.com/user-attachments/assets/b5b2681d-8dc5-4fa2-a80d-5172336413af" />
 ---
 
 ### 6️⃣ K3s Cluster Running
 📸 *Screenshot – K3s Nodes *  
+<img width="975" height="62" alt="Image" src="https://github.com/user-attachments/assets/a07e6501-06e9-47bb-9d7c-deb00ba3a9d1" />
  
 📸 *Screenshot – K3s Pods*  
- 
+<img width="975" height="404" alt="Image" src="https://github.com/user-attachments/assets/99926e81-aafc-439c-ae5d-ef24301d93e1" />
 ---
 
 ### 7️⃣ CloudWatch Agent Running
 📸 *Screenshot – CloudWatch Agent Running*  
- 
+<img width="975" height="494" alt="Image" src="https://github.com/user-attachments/assets/fcd99152-edbd-4b46-a1a0-8bc0c8d90e20" />
 ---
 
 ### 8️⃣ CloudWatch Metrics in AWS Console
 📸 *Screenshot – CPU & Memory Metrics*  
- 
-
- 
+ <img width="975" height="385" alt="Image" src="https://github.com/user-attachments/assets/e9e2547b-a4f4-47b3-ab77-828d823f3f07" />
+ <img width="975" height="283" alt="Image" src="https://github.com/user-attachments/assets/1ae31652-d637-407a-868a-6be67d5075d7" />
 
 ---
 
