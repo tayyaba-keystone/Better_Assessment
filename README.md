@@ -63,7 +63,7 @@ The project is optimized to run smoothly on a **t2.micro** instance.
 ---
 
 ### 6️⃣ K3s Cluster Running
-📸 *Screenshot – K3s Nodes *  
+📸 *Screenshot – K3s Nodes*  
 <img width="975" height="62" alt="Image" src="https://github.com/user-attachments/assets/a07e6501-06e9-47bb-9d7c-deb00ba3a9d1" />
  
 📸 *Screenshot – K3s Pods*  
