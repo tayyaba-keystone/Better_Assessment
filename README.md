@@ -30,14 +30,16 @@ The project is optimized to run smoothly on a **t2.micro** instance.
 
 ### 1️⃣ EC2 Instance Running
 📸 *Screenshot – EC2 instance running*  
+<img width="975" height="195" alt="Image" src="https://github.com/user-attachments/assets/f90f2819-bbe0-420a-8fdb-635357b693d9" />
  
 ---
 
 ### 2️⃣ IAM Role Attached
 📸 *Screenshot – IAM Role Attached*  
- 
- 
- 
+<img width="975" height="231" alt="Image" src="https://github.com/user-attachments/assets/e33f7e77-b9f1-4873-b56e-5e70d9c591b3" />
+<img width="975" height="285" alt="Image" src="https://github.com/user-attachments/assets/adae8a1e-b3a8-4551-b85a-649085f535bb" />
+<img width="975" height="338" alt="Image" src="https://github.com/user-attachments/assets/7ebb867c-cbe1-4d27-83e8-0041329c2c66" />
+
 ---
 
 ### 3️⃣ Docker Installed & Running
